@@ -40,7 +40,7 @@ A lightweight system to connect Chess.com live and bot games with a local Stockf
 
 ## Frontend (Userscript)
 1. Install Tampermonkey (or Greasemonkey) in your browser.
-2. Create a new userscript and replace its content with the code from `frontend.txt`.
+2. Create a new userscript and replace its content with the code from `frontend.js`.
 3. Ensure the `API` URL in the script is set to `http://localhost:5000/bestmove`.
 4. Reload a Chess.com game (Bot or Live).
 
