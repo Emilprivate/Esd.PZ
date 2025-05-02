@@ -16,7 +16,7 @@ A lightweight system to connect Chess.com live and bot games with a local Stockf
 - Stockfish installed and in `$PATH`
 - Browser with Tampermonkey or similar userscript manager
 
-[demo](resources/demo.png)
+![](resources/demo.png)
 
 ## Installation
 1. Clone or download this repository.
