@@ -1,56 +1,55 @@
-<h1 align="center">Esd.GHJ</h1>
+<div align="center">
 
-![](https://github.com/Emilprivate/Esd.GHJ/blob/main/GHJ-Icon-Wide.png)
+# Esd.PZ - Project Zomboid
+*Cheat for Project Zomboid*
 
-<p align="center">
-  <img src="https://img.shields.io/github/v/release/Emilprivate/Esd.GHJ" alt="GitHub release (latest by date)">
-  <img src="https://img.shields.io/github/license/Emilprivate/Esd.GHJ" alt="GitHub">
-  <img src="https://img.shields.io/github/commit-activity/t/Emilprivate/Esd.GHJ" alt="GitHub commit activity (branch)">
-  <img src="https://img.shields.io/github/issues/Emilprivate/Esd.GHJ" alt="GitHub issues">
-  <img src="https://img.shields.io/badge/-c++-black?logo=c%2B%2B&style=social alt="C++20">
-</p>
+[![Cheat Menu](https://i.imgur.com/owsw0ni.png)]()
 
-<p align="center">
-This GitHub project, "Esd.GHJ," stands for "game hacking journey", which is a repository dedicated to my journey in game hacking.
-</p>
+📝 [Unknowncheats](https://www.unknowncheats.me/forum/other-mmorpg-and-strategy/584072-project-zomboid-cheat-esdpz.html)
+🎥 [Youtube Demo](https://www.youtube.com/watch?v=unk9719IUTI&ab_channel=redfane)
 
-<p align="center">
-<a href="https://www.unknowncheats.me/forum/members/2173018.html">My UnknownCheats</a>
-</p>
+___
+**PS:** You may not need to do any of this! Try downloading the project and try to build it first!
 
-## Contributing
-We welcome contributions from the community to improve Esd.GHJ. Whether you're fixing a bug, implementing a new feature, or enhancing documentation, your contribution is valuable. Follow the steps below to contribute:
+## Installation Guide
+### Requirements:
+[Visual Studio](https://visualstudio.microsoft.com/free-developer-offers/) &
+[JDK](https://www.oracle.com/java/technologies/downloads/)
 
-1) Fork the repository and clone it locally.
-2) Create a new branch for your contribution: git checkout -b feature/my-contribution.
-3) Make your changes and ensure that the project builds successfully.
-4) Commit your changes: git commit -am 'Add my contribution'.
-5) Push the branch to your forked repository: git push origin feature/my-contribution.
-6) Open a pull request in this repository, providing a clear description of your contribution.
 
-## Issues
-If you encounter any issues with the project or have suggestions for improvements, we encourage you to submit an issue. To do so, follow these steps:
 
-1) Go to the Issues tab on the project's GitHub repository.
-2) Click on the "New Issue" button.
-3) Provide a clear and descriptive title for the issue.
-4) Describe the issue or suggestion in detail, including steps to reproduce if it's a bug.
-5) Submit the issue, and it'll be reviewed and responded to as soon as possible.
+### Installation
+First ensure that `Configuration` is set to `All Configurations` and `Platform` is set to `x64`
 
-## Donations
-Esd.GHJ is an open-source project developed and maintained by hobbyists and volunteers. If you find this project useful and would like to support its continued development, we accept donations of any amount.
+___
 
-Your contributions will help compensate for the time and resources put into the project. Donations also demonstrate your appreciation and motivate us to deliver more value to the community.
+**Adjust the JDK with the version you have and paste this into `VC++ Directories -> Include Directories`**
 
-You can make donations on our [Patreon](https://www.patreon.com/redfane). We greatly appreciate your support!
+`$(VC_IncludePath);$(WindowsSDK_IncludePath);C:\Program Files\Java\jdk-22\include\win32;C:\Program Files\Java\jdk-22\include;$(ProjectDir)\Resources\json_cpp_format;$(ProjectDir)\Resources\libraries\json;$(ProjectDir)\Resources\libraries\imgui;$(ProjectDir)\Resources\libraries\opengl\x64;$(ProjectDir)\Resources\libraries\minhook\;$(ProjectDir)\Resources\libraries\stb;$(IncludePath)`
 
-## License
-This project is licensed under the MIT License.
+___
 
-## Disclaimer
+Paste this into `Library Directories`
 
-This software is provided "as is", without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose and noninfringement.
+`$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(ProjectDir)\Resources\libraries\minhook\x64\debug;$(ProjectDir)\Resources\libraries\opengl\x64;$(LibraryPath)`
 
-In no event shall the author or copyright holder be liable for any claim, damages, or other liability, whether in an action of contract, tort, or otherwise, arising from, out of, or in connection with the software or the use or other dealings in the software.
+___
 
-This software is intended for educational and research purposes only. The author and copyright holder are not responsible for any illegal use of this software. All users are responsible for ensuring their use of this software complies with local, state, and federal laws and regulations.
+Paste this into `Linker->Input`
+
+`$(CoreLibraryDependencies);%(AdditionalDependencies);libMinHook.x64.lib;glew32s.lib;Shell32.lib;Comdlg32.lib;%(AdditionalDependencies)`
+
+___
+
+Also ensure that all files & resources are included in the project! You can do this by creating a filter and dragging everything into that. 
+
+Additionally ensure that `_CRT_SECURE_NO_WARNINGS` is placed in `C/C++ -> Preprocessor -> Preprocessor Definitions`
+
+Additionally ensure that `Configuration Properties -> Advanced -> Character Set` is set to `Use Multi-Byte Character Set`
+
+Additionally ensure that `Configuration Properties -> General -> C++ Language Standard` is set to `ISO C++20 Standard`
+
+</div>
+
+
+
